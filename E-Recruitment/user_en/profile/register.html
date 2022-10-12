@@ -1,0 +1,1031 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+			<link rel="shortcut icon" href="..\..\..\orpr\MUlogo.ico">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="Author" content="กองทรัพยากรบุคคล มหาวิทยาลัยมหิดล (MUHR)">
+        <meta name="description" content="สมัครงาน มหาวิทยาลัยมหิดล,กองการเจ้าหน้าที่, มหิดล, ทรัพยากรบุคคล, การบริหารทรัพยากร,บุคคล, การบริหาร, ชั้นนำ, ปัญญาของแผ่นดิน, หางานราชการ,  งาน, มหาวิทยาลัย, งานมหาวิทยาลัย, วัฒนธรรมองค์กร, วัฒนธรรมองค์กร มหาวิทยาลัย, วัฒนธรรมองค์กร มหิดล. การพัฒนา,หลักสูตรพัฒนานักบริหาร,โครงการพัฒนานักบริหาร,ความเป็นเลิศ,ยุทธศาสตร์การบริหารทรัพยากรบุคคล,แผนกลุยุทธ์">
+        <meta name="keywords" content="Human Resource, HR, Administrator, MUHR, , Mahidol, Thailand, Salaya, Thai University, Training Development, Succession Plan, Talent Management, ">
+        <meta name="Keywords" content="หางาน, ทรัพยากรบุคคล, Human Resource Division, muhr, กองทรัพยากรบุคคล, Succession plan, หางานราชการ, โครงการพัฒนา, วัฒนธรรมองค์กร" lang="th">
+    
+        <title>e-Recruitment | Mahidol University | Human Resource Division</title>
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="..\assets\css\bootstrap.min.css">
+		<link rel="stylesheet" href="..\assets\font-awesome\4.2.0\css\font-awesome.min.css"> 
+		<link href='..\..\..\css.css?family=Kanit:300,600&subset=thai,latin' rel='stylesheet' type='text/css'>
+		
+		<!-- page specific plugin styles -->
+		
+		
+		<!-- text fonts -->
+		<!--<link rel="stylesheet" href="https://muhr.mahidol.ac.th/E-Recruitment/user_en/assets/fonts/fonts.googleapis.com.css" />-->
+		<link rel="stylesheet" href="..\assets\css\font.css"> 
+		
+		<!-- ace styles -->
+		<link rel="stylesheet" href="..\assets\css\ace.min.css" class="ace-main-stylesheet" id="main-ace-style">
+
+		
+		
+                
+        <!-- Custom CSS -->
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="user_en/assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="user_en/assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+		<script src="..\assets\js\ace-extra.min.js"></script>
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="user_en/assets/js/html5shiv.min.js"></script>
+		<script src="user_en/assets/js/respond.min.js"></script>
+		<![endif]-->		
+		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="..\assets\css\bootstrap-duallistbox.min.css">
+		<link rel="stylesheet" href="..\assets\css\bootstrap-multiselect.min.css">
+		<link rel="stylesheet" href="..\assets\css\select2.min.css">
+
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="..\assets\css\ace.min.css" class="ace-main-stylesheet" id="main-ace-style">
+
+		<script>
+			function isAlphanumeric( str ) {
+				return /^[0-9a-zA-Z]+$/.test(str);
+			}
+			
+			function checkID(id){
+				if(id.length != 13) return false;
+				for(i=0, sum=0; i < 12; i++)
+				sum += parseFloat(id.charAt(i))*(13-i); 
+				if((11-sum%11)%10!=parseFloat(id.charAt(12))) return false; return true;
+			}
+			
+			function validateEmail(email) {
+				var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				return re.test(email);
+			}
+			
+			function isEnglishchar(str){     
+				var isEnglish=true;     
+				if ( /[^A-Za-z0-9\.\_\-\@\d]/.test(str)) {  
+					
+					isEnglish=false;     
+				}       
+				return isEnglish;   
+			}
+	
+			function checkBeforAccept() {
+				
+				
+				if (document.regis.title.value=="") {
+					alert('Please fill out this form completely.');
+					document.regis.title1.focus() ;
+					return false;
+				}else if(document.regis.name.value=="") {
+					alert("Please fill out this form completely.") ;
+					document.regis.name.focus() ;
+					return false;
+				}else if(document.regis.lastname.value=="") {
+					alert("Please fill out this form completely.") ;
+					document.regis.lastname.focus() ;
+					return false;
+				}else if(document.regis.idcardno.value=="") {
+					alert("Please fill out this form completely.") ;
+					document.regis.idcardno.focus() ;
+					return false;
+				}else if(document.regis.pass.value=="") {
+					alert("Please fill out this form completely.") ; 
+					document.regis.pass.focus() ;
+					return false;
+				}else if(document.regis.repass.value=="") {
+					alert("Please fill out this form completely.") ;
+					document.regis.repass.focus() ;
+					return false;
+				}else if(document.regis.email.value=="") { 
+					alert("Please fill out this form completely.") ;
+					document.regis.email.focus() ;
+					return false;
+				}else if(!validateEmail(document.regis.email.value)){
+					alert('Please enter a valid email');
+					document.regis.email.focus() ;
+					return false;
+				}else if(!isEnglishchar(document.regis.email.value)){
+					alert('อีเมลไม่สามารถใช้ภาษาไทยได้ กรุณาตรวจสอบอีกครั้ง');
+					document.regis.email.focus();
+					return false;
+				}else if(document.regis.position.value=="") {
+					alert("Please fill out this form completely.") ;
+					document.regis.position.focus() ;
+					return false;
+				}else if(document.regis.pass.value != "") {
+					var a = isAlphanumeric( document.regis.pass.value );
+					if (a == false){
+						alert("Provide a password for the English and numbers only.") ;
+						document.regis.pass.focus() ;
+						return false;
+					}
+					
+				}else if(document.regis.pass.value != document.regis.repass.value) {
+					alert("Password and Confirm Password not match") ;
+					document.regis.repass.focus() ;
+					return false;
+				}else{
+					return true;
+					
+				}
+				
+				/*else if(!checkID(document.regis.idcardno.value)){
+					alert('รหัสประชาชนไม่ถูกต้อง');
+					document.regis.idcardno.focus() ;
+					return false;
+				}*/
+				return true;
+			}
+		</script>
+	</head>
+
+	<body class="no-skin textnalmal">
+		<div id="navbar" class="navbar navbar-default">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+					<span class="sr-only">Toggle sidebar</span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+				</button>
+
+				<div class="navbar-header pull-left">
+					<a href="..\..\index.html"><img src="..\..\image\logomu.png" width="193" height="45" alt=""></a>
+				</div>
+
+				<div class="navbar-buttons navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						
+						<li class="light-blue">
+						
+							<a href="..\handout.html">
+								<i class="ace-icon fa fa-file"></i> Guideline
+							</a>
+						
+						</li>
+					
+						<li class="light-blue">
+						
+							
+                        								<a href="..\..\login\login_en.html">
+								<i class="ace-icon fa fa-user"></i>Login
+							</a>
+
+                            						</li>
+						<li class="light-blue">
+						
+							<a href="..\..\index.html">
+								<img src="..\..\image\thai.jpg" width="60%">
+							</a>
+						
+						</li>
+					</ul>
+				</div>
+			</div><!-- /.navbar-container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div id="sidebar" class="sidebar                  responsive">
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+				</script>
+
+				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+						<!--<button class="btn btn-success">
+							<i class="ace-icon fa fa-signal"></i>
+						</button>
+
+						<button class="btn btn-info">
+							<i class="ace-icon fa fa-pencil"></i>
+						</button>
+
+						<button class="btn btn-warning">
+							<i class="ace-icon fa fa-users"></i>
+						</button>
+
+						<button class="btn btn-danger">
+							<i class="ace-icon fa fa-cogs"></i>
+						</button>-->
+					</div>
+
+					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+						<!--<span class="btn btn-success"></span>
+
+						<span class="btn btn-info"></span>
+
+						<span class="btn btn-warning"></span>
+
+						<span class="btn btn-danger"></span>-->
+					</div>
+				</div><!-- /.sidebar-shortcuts -->
+
+
+
+				<ul class="nav nav-list">
+					
+					
+					<li>
+					
+						<a href="..\..\index_en.html"><!-- class="dropdown-toggle"-->
+							<i class="menu-icon fa fa-home blue"></i>
+							<span class="menu-text"> Home </span>
+
+							<!--<b class="arrow fa fa-angle-down"></b> -->
+						</a>
+					</li>
+					<li>					
+						<a href="..\index.htm"><!-- class="dropdown-toggle"-->
+							<i class="menu-icon fa fa-list red"></i>
+							<span class="menu-text"> Announcement </span>
+
+							<!--<b class="arrow fa fa-angle-down"></b> -->
+						</a>
+					</li>
+					
+					
+										<li>
+						<a href="register.html">
+							<i class="menu-icon fa fa-suitcase orange"></i>
+							<span class="menu-text"> Sign-up </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+					
+					
+                    					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-file-o blue"></i>
+							<span class="menu-text"> Related Links </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<!--<li class="">
+								<a href="https://muhr.mahidol.ac.th/E-Recruitment/user_en/document.php">
+									<i class="menu-icon fa fa-caret-right"></i>
+									<span class="menu-text"> เอกสารประกอบ </span>
+								</a>
+
+								<b class="arrow"></b>
+							</li>-->
+
+							<li class="">
+								<a href="..\..\..\orpr\index.htm" target="_blank">
+									<i class="menu-icon fa fa-caret-right"></i>
+									<span class="menu-text"> Human Resource Division </span>
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							
+							<li class="">
+								<a href="..\..\..\th\index.htm" target="_blank"> 
+									<i class="menu-icon fa fa-caret-right"></i>
+									<span class="menu-text"> Mahidol University </span>
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+					
+                    <li>
+						<a href="..\contact.html">
+							<i class="menu-icon fa fa-envelope green"></i>
+							<span class="menu-text"> Contact us </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+                    
+
+					
+
+					
+				</ul><!-- /.nav-list -->
+
+				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+				</div>
+
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+				</script>
+			</div>
+			<div class="main-content">
+				<div class="main-content-inner">
+					
+
+					<div class="page-content">
+						
+						<div class="page-header">
+							<h1>
+								Sign-up
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									 e-Recruitment Online
+								</small> 
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								
+            <form class="form-horizontal" method="post" role="form" name="regis" id="regis" action="register_process.php" onsubmit="return checkBeforAccept();">
+                        
+                        	
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right"> Name Title <span style="color:#F00"> *</span> </label> 
+					<div class="col-sm-9">
+					<label class="radio-inline">
+						<input type="radio" name="title" id="title1" value="Mr." checked="">Mr.
+					</label>
+					
+					<label class="radio-inline">
+						<input type="radio" name="title" id="title3" value="Mrs.">Mrs.
+					</label>
+					
+					<label class="radio-inline">
+						<input type="radio" name="title" id="title2" value="Ms.">Ms.
+					</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					
+					<label class="col-sm-3 control-label no-padding-right"> Name <span style="color:#F00"> *</span></label> 
+					<div class="col-sm-9">
+					<input type="text" class="col-xs-10 col-sm-5" name="name" id="name">
+					</div>
+				</div>
+				
+				
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right"> Surname <span style="color:#F00"> *</span></label> 
+					<div class="col-sm-9">
+					<input type="text" class="col-xs-10 col-sm-5" name="lastname" id="lastname">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right"> ID Card No./ Passport No. <span style="color:#F00"> *</span></label>
+					<div class="col-sm-9">
+					<input type="text" class="col-xs-10 col-sm-5" name="idcardno" id="idcardno">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right"> Password <span style="color:#F00"> *</span></label> 
+					<div class="col-sm-9">
+					<input type="password" class="col-xs-10 col-sm-5" name="pass" id="pass" placeholder="A-Z,a-z,0-9">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right"> Confirm Password <span style="color:#F00"> *</span></label> 
+					<div class="col-sm-9">
+					<input type="password" class="col-xs-10 col-sm-5" name="repass" id="repass" placeholder="A-Z,a-z,0-9">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right"> Email <span style="color:#F00"> *</span></label>
+					<div class="col-sm-9">
+					<input type="text" class="col-xs-10 col-sm-5" name="email" id="email" placeholder="abcdef@gmail.com">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right"> Interested Position <span style="color:#F00"> *</span></label>
+					<div class="col-sm-9">
+												<select class="select2" name="position" id="position" data-placeholder="select ...">   
+						<option value="">&nbsp;</option>
+						 
+						<option value="1">Professor</option> 
+						 
+						<option value="2">Associate Professor</option> 
+						 
+						<option value="3">Assistant Professor</option> 
+						 
+						<option value="4">Instructor</option> 
+						 
+						<option value="5">Senior Researcher</option> 
+						 
+						<option value="6">Physiotherapist</option> 
+						 
+						<option value="7">Dentist</option> 
+						 
+						<option value="8">Registered Nurse</option> 
+						 
+						<option value="9">Medical Physician</option> 
+						 
+						<option value="10">Veterinarian</option> 
+						 
+						<option value="11">Medical Technologist</option> 
+						 
+						<option value="12">Pharmacist</option> 
+						 
+						<option value="13">Mechanical Engineer</option> 
+						 
+						<option value="14">Electrical Engineer</option> 
+						 
+						<option value="15">Civil Engineer</option> 
+						 
+						<option value="16">Architect</option> 
+						 
+						<option value="17">Radiological Technologist</option> 
+						 
+						<option value="18">Computer Technical Officer</option> 
+						 
+						<option value="19">Clinical Psychologist</option> 
+						 
+						<option value="20">Speech  Therapist</option> 
+						 
+						<option value="21">Occupational Therapist</option> 
+						 
+						<option value="22">Cardio-Thoracic Technologist</option> 
+						 
+						<option value="23">Prosthetist</option> 
+						 
+						<option value="24">Computer System Analyst</option> 
+						 
+						<option value="25">Researcher</option> 
+						 
+						<option value="26">Applied Thai Tradition Medical Practitioner</option> 
+						 
+						<option value="27">Traditional Chinese Medical Practitioner</option> 
+						 
+						<option value="28">Educator</option> 
+						 
+						<option value="29">Education and Career Guidance Officer</option> 
+						 
+						<option value="30">Scientist</option> 
+						 
+						<option value="31">Librarian</option> 
+						 
+						<option value="32">Medical Statistician</option> 
+						 
+						<option value="33">Nutritionist</option> 
+						 
+						<option value="34">Psychologist</option> 
+						 
+						<option value="35">Audio-Visual Technical Officer</option> 
+						 
+						<option value="36">Research Technical Officer</option> 
+						 
+						<option value="37">Information Resource Analyst</option> 
+						 
+						<option value="38">Medical Scientist</option> 
+						 
+						<option value="39">Dental Technical Officer</option> 
+						 
+						<option value="40">Vocational Therapist</option> 
+						 
+						<option value="41">Dietician</option> 
+						 
+						<option value="42">Computer Programmer</option> 
+						 
+						<option value="43">Braille Code Technical Officer</option> 
+						 
+						<option value="44">Sign Language Technical Officer</option> 
+						 
+						<option value="45">Sign language Interpreter</option> 
+						 
+						<option value="46">Rehabilitation Counselor</option> 
+						 
+						<option value="47">Assisting Technology Practitioner</option> 
+						 
+						<option value="48">Research Assistant</option> 
+						 
+						<option value="49">Child Development Officer</option> 
+						 
+						<option value="50">Sports Scientist</option> 
+						 
+						<option value="51">Thai Music Technical Officer</option> 
+						 
+						<option value="52">Geographical Information Technologist</option> 
+						 
+						<option value="53">Medical Plant Technical Officer</option> 
+						 
+						<option value="54">Environmentalist</option> 
+						 
+						<option value="55">Assistant Instructor</option> 
+						 
+						<option value="56">Cardiac Sonographer</option> 
+						 
+						<option value="57">Archivist</option> 
+						 
+						<option value="58">Medical Coder</option> 
+						 
+						<option value="59">Cultural Officer</option> 
+						 
+						<option value="60">General Administration Officer</option> 
+						 
+						<option value="61">Finance and Accounting Analyst</option> 
+						 
+						<option value="62">Academic Art Technician</option> 
+						 
+						<option value="63">Internal Auditor</option> 
+						 
+						<option value="64">Health Promotion Educator</option> 
+						 
+						<option value="65">Engineer</option> 
+						 
+						<option value="66">Plan and Policy Analyst</option> 
+						 
+						<option value="67">Agricultural Research Officer</option> 
+						 
+						<option value="68">Animal Husbandry Technical Officer</option> 
+						 
+						<option value="69">Legal Officer</option> 
+						 
+						<option value="70">Human Resource Officer</option> 
+						 
+						<option value="71">Public Relations Officer</option> 
+						 
+						<option value="72">Supply Analyst</option> 
+						 
+						<option value="73">Academic Statistician</option> 
+						 
+						<option value="74">Foreign Relations Officer</option> 
+						 
+						<option value="75">Social Work Officer</option> 
+						 
+						<option value="76">Computer Information Analyst</option> 
+						 
+						<option value="77">Quality Development  Technical Officer</option> 
+						 
+						<option value="78">Training Technical Officer</option> 
+						 
+						<option value="79">Animal Care Assistant</option> 
+						 
+						<option value="80">Asset Management Specialist</option> 
+						 
+						<option value="81">Graphic Designer</option> 
+						 
+						<option value="82">Asset Management Analyst</option> 
+						 
+						<option value="83">Investment Management Analyst</option> 
+						 
+						<option value="84">Risk Management Officer</option> 
+						 
+						<option value="85">Childcare Teacher</option> 
+						 
+						<option value="86">Constructive administration Officer</option> 
+						 
+						<option value="87">Dental Technician</option> 
+						 
+						<option value="88">Computer Technician</option> 
+						 
+						<option value="89">Printing Technician</option> 
+						 
+						<option value="90">Art Technician</option> 
+						 
+						<option value="91">Draftsman</option> 
+						 
+						<option value="92">Mechanics Technician</option> 
+						 
+						<option value="93">Electrician</option> 
+						 
+						<option value="94">Electronics Technician</option> 
+						 
+						<option value="95">Technician</option> 
+						 
+						<option value="96">General Administration Assistant</option> 
+						 
+						<option value="97">Agricultural Officer</option> 
+						 
+						<option value="98">Animal Husbandry Officer</option> 
+						 
+						<option value="99">Audio Visual Officer</option> 
+						 
+						<option value="100">Library Service Officer</option> 
+						 
+						<option value="101">Vocational Therapy Technician</option> 
+						 
+						<option value="102">Scientific Officer</option> 
+						 
+						<option value="103">Dental Assistant</option> 
+						 
+						<option value="104">Pharmacy Technician</option> 
+						 
+						<option value="105">Practical Nurse</option> 
+						 
+						<option value="106">Nutrition officer</option> 
+						 
+						<option value="107">Medical Technician Assistant, Medical Science Technician </option> 
+						 
+						<option value="108">Radiological Technician</option> 
+						 
+						<option value="109">Physical Therapist Assistant</option> 
+						 
+						<option value="110">Braille Code Technician</option> 
+						 
+						<option value="111">General Service Officer</option> 
+						 
+						<option value="112">Applied Thai Tradition Medical Assistant</option> 
+						 
+						<option value="113">Childcare Officer 	</option> 
+						 
+						<option value="114">The President</option> 
+						 
+						<option value="115">Vice President </option> 
+						 
+						<option value="116">Dean / Director </option> 
+						 
+						<option value="117">Assistant to the President </option> 
+						 
+						<option value="118">Deputy Dean / Deputy Director </option> 
+						 
+						<option value="119">Director Hospital</option> 
+						 
+						<option value="120">Head of Department</option> 
+						 
+						<option value="121">Chief of Office of The President</option> 
+						 
+						<option value="122">Director of Division</option> 
+						 
+						<option value="123">Secretary of Faculty/ Institution)</option> 
+						 
+						<option value="124">Director of Department</option> 
+						 
+						<option value="125">Deputy Director of Department</option> 
+						 
+						<option value="126">Head of Division</option> 
+						 
+						<option value="127">Nurse Supervisor</option> 
+						 
+						<option value="128">Head Nurse</option> 
+						 
+						<option value="129">Head of Unit</option> 
+						 
+						<option value="130">(Practitioner Level)</option> 
+						 
+						<option value="131">(Professional Level)</option> 
+						 
+						<option value="132">(Senior Professional Level)</option> 
+						 
+						<option value="133">(Expert Level)</option> 
+						 
+						<option value="134">(Advisory Level)</option> 
+						 
+						<option value="135">(Operational Level)</option> 
+						 
+						<option value="136">(Experienced Level)</option> 
+						 
+						<option value="137">(Senior Experienced Level)</option> 
+						 
+						<option value="138">(Human Resource Officer, Practitioner Level)</option> 
+						 
+						<option value="139">(Human Resource Officer,Professional Level)</option> 
+						 
+						<option value="140">(Human Resource Officer,Senior Professional Level)</option> 
+						 
+						<option value="141">(Human Resource Officer, Expert Level)</option> 
+						 
+						<option value="142">((Human Resource Officer, Advisory Level)</option> 
+						 
+						<option value="143">(Technician, Operational Level)</option> 
+						 
+						<option value="144">(Technician, Experienced Level)</option> 
+						 
+						<option value="145">(Technician, Senior Experienced Level)</option> 
+						 
+						<option value="149">Instructor Foreigner</option> 
+						 
+						<option value="150">English native Language Specialist</option> 
+						 
+						<option value="151">พนักงานพัสดุ</option> 
+						 
+						<option value="152">นักทรัพยากรบุคคล (อาวุโส)</option> 
+						 
+						<option value="153">Officer</option> 
+						 
+						<option value="154">Occupational Health and Safety Officer</option> 
+						 
+						<option value="155">Dentist Assistant</option> 
+						 
+						<option value="156">Nursing Assistant</option> 
+						 
+						<option value="157">-</option> 
+						 
+						<option value="158">Technicians Assistant</option> 
+						 
+						<option value="159">General Service Officer</option> 
+						 
+						<option value="160">General Administration Officer</option> 
+						 
+						<option value="161">Carpenter</option> 
+						 
+						<option value="162">-</option> 
+						 
+						<option value="163">Janitor</option> 
+						 
+						<option value="164">Intellectual Property Officer</option> 
+						 
+						<option value="165">Asset Management Officer</option> 
+						 
+						<option value="166">Intellectual Property Officer</option> 
+						 
+						<option value="167">security guard</option> 
+						 
+						<option value="168">Driver</option> 
+						 
+						<option value="169">Director</option> 
+						 
+						<option value="170">Dean</option> 
+						 
+						<option value="171">Refrigerator and Air - Conditioner Technician</option> 
+						 
+						<option value="172">Plumber</option> 
+						 
+						<option value="173">พนักงานวิทยาศาสตร์</option> 
+						 
+						<option value="174">Mantenance</option> 
+						 
+						<option value="175">ครูพี่เลี้ยง</option> 
+						 
+						<option value="176">คนสวน</option> 
+						 
+						<option value="177">Pharmacist Assistant</option> 
+						 
+						<option value="178">พนักงานเก็บเงิน</option> 
+						 
+						<option value="179">พนักงานห้องสมุด</option> 
+						 
+						<option value="180">พนักงานประกอบอาหาร</option> 
+						 
+						<option value="181">พนักงานประจำห้อง</option> 
+						 
+						<option value="182">Laboratory staff</option> 
+						 
+						<option value="183">Head of Bereau</option> 
+						 
+						<option value="184">แม่บ้าน</option> 
+						 
+						<option value="185">-</option> 
+						 
+						<option value="186">Laboratory staff</option> 
+						 
+						<option value="187">Audio Visual Staff</option> 
+												</select> 
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right">  </label>
+					<div class="col-sm-9">
+					<label>
+					<input name="accept" id="accept" type="checkbox" value="1" onchange="document.getElementById('bt_submit').disabled = !this.checked;" required="">
+					<span class="lbl"> I accept </span> <a href="rule.html" target="_blank"> <a href="rule.html" target="_blank">terms and conditions </a>
+					</label>
+					</div>
+				</div>
+				
+				<div class="clearfix form-actions">
+				<div class="col-md-offset-3 col-md-9">
+					<button class="btn btn-info" type="submit" id="bt_submit" disabled=""> 
+						<i class="ace-icon fa fa-check bigger-110"></i>
+						Submit
+					</button>
+
+					&nbsp; &nbsp; &nbsp;
+					<button class="btn" type="reset">
+						<i class="ace-icon fa fa-undo bigger-110"></i>
+						Reset
+					</button>
+				</div>
+				</div>
+
+
+			</form>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+						<div class="footer">
+				<div class="footer-inner">
+					<div class="footer-content">
+						<span class="bigger-120">
+							<span class="blue bolder">Mahidol University</span>
+							 | e-Recruitment © 2016
+						</span>
+
+						&nbsp; &nbsp;
+						<span class="action-buttons">
+							
+							<a href="..\..\..\MUHR.MAHIDOL\index.htm" target="_blank">
+								<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+							</a>
+
+						</span><br>
+						<span class="small">
+						This Website Compatible With Firefox and Google Chrome
+						</span>
+					</div>
+				</div>
+			</div>
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="..\assets\js\jquery.2.1.1.min.js"></script>
+		
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="assets/js/jquery.1.11.1.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../assets/js/jquery.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="..\assets\js\bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<!-- page specific plugin scripts -->
+		<script src="..\assets\js\jquery.bootstrap-duallistbox.min.js"></script>
+		<script src="..\assets\js\jquery.raty.min.js"></script>
+		<script src="..\assets\js\bootstrap-multiselect.min.js"></script>
+		<script src="..\assets\js\select2.min.js"></script>
+		<script src="..\assets\js\typeahead.jquery.min.js"></script>
+		<!--[if lte IE 8]> 
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+		<script src="..\assets\js\jquery-ui.custom.min.js"></script>
+		<script src="..\assets\js\jquery.ui.touch-punch.min.js"></script>
+		<script src="..\assets\js\jquery.easypiechart.min.js"></script>
+		<script src="..\assets\js\jquery.sparkline.min.js"></script>
+		<script src="..\assets\js\jquery.flot.min.js"></script>
+		<script src="..\assets\js\jquery.flot.pie.min.js"></script>
+		<script src="..\assets\js\jquery.flot.resize.min.js"></script>
+
+		<!-- ace scripts -->
+		<script src="..\assets\js\ace-elements.min.js"></script>
+		<script src="..\assets\js\ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($){
+			    var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox({infoTextFiltered: '<span class="label label-purple label-lg">Filtered</span>'});
+				var container1 = demo1.bootstrapDualListbox('getContainer');
+				container1.find('.btn').addClass('btn-white btn-info btn-bold');
+			
+				/**var setRatingColors = function() {
+					$(this).find('.star-on-png,.star-half-png').addClass('orange2').removeClass('grey');
+					$(this).find('.star-off-png').removeClass('orange2').addClass('grey');
+				}*/
+				$('.rating').raty({
+					'cancel' : true,
+					'half': true,
+					'starType' : 'i'
+					/**,
+					
+					'click': function() {
+						setRatingColors.call(this);
+					},
+					'mouseover': function() {
+						setRatingColors.call(this);
+					},
+					'mouseout': function() {
+						setRatingColors.call(this);
+					}*/
+				})//.find('i:not(.star-raty)').addClass('grey');
+				
+				
+				
+				//////////////////
+				//select2
+				$('.select2').css('width','350px').select2({allowClear:true})
+				$('#select2-multiple-style .btn').on('click', function(e){
+					var target = $(this).find('input[type=radio]');
+					var which = parseInt(target.val());
+					if(which == 2) $('.select2').addClass('tag-input-style');
+					 else $('.select2').removeClass('tag-input-style');
+				});
+				
+				//////////////////
+				$('.multiselect').multiselect({
+				 enableFiltering: true,
+				 buttonClass: 'btn btn-white btn-primary',
+				 templates: {
+					button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"></button>',
+					ul: '<ul class="multiselect-container dropdown-menu"></ul>',
+					filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
+					filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default btn-white btn-grey multiselect-clear-filter" type="button"><i class="fa fa-times-circle red2"></i></button></span>',
+					li: '<li><a href="javascript:void(0);"><label></label></a></li>',
+					divider: '<li class="multiselect-item divider"></li>',
+					liGroup: '<li class="multiselect-item group"><label class="multiselect-group"></label></li>'
+				 }
+				});
+				
+				
+				///////////////////
+					
+				//typeahead.js
+				//example taken from plugin's page at: https://twitter.github.io/typeahead.js/examples/
+				var substringMatcher = function(strs) {
+					return function findMatches(q, cb) {
+						var matches, substringRegex;
+					 
+						// an array that will be populated with substring matches
+						matches = [];
+					 
+						// regex used to determine if a string contains the substring `q`
+						substrRegex = new RegExp(q, 'i');
+					 
+						// iterate through the pool of strings and for any string that
+						// contains the substring `q`, add it to the `matches` array
+						$.each(strs, function(i, str) {
+							if (substrRegex.test(str)) {
+								// the typeahead jQuery plugin expects suggestions to a
+								// JavaScript object, refer to typeahead docs for more info
+								matches.push({ value: str });
+							}
+						});
+			
+						cb(matches);
+					}
+				 }
+			
+				 $('input.typeahead').typeahead({
+					hint: true,
+					highlight: true,
+					minLength: 1
+				 }, {
+					name: 'states',
+					displayKey: 'value',
+					source: substringMatcher(ace.vars['US_STATES'])
+				 });
+					
+					
+				///////////////
+				
+				
+				//in ajax mode, remove remaining elements before leaving page
+				$(document).one('ajaxloadstart.page', function(e) {
+					$('[class*=select2]').remove();
+					$('select[name="duallistbox_demo1[]"]').bootstrapDualListbox('destroy');
+					$('.rating').raty('destroy');
+					$('.multiselect').multiselect('destroy');
+				});
+			
+			});
+		</script>
+	</body>
+</html>

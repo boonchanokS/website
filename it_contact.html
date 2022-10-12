@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>Welcome to Sumitomo Rubber Thailand</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- site icons -->
+<link rel="icon" href="images/fevicon/fevicon.gif" type="image/gif" />
+<!-- bootstrap css -->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<!-- Site css -->
+<link rel="stylesheet" href="css/style.css" />
+<!-- responsive css -->
+<link rel="stylesheet" href="css/responsive.css" />
+<!-- colors css -->
+<link rel="stylesheet" href="css/colors1.css" />
+<!-- custom css -->
+<link rel="stylesheet" href="css/custom.css" />
+<!-- wow Animation css -->
+<link rel="stylesheet" href="css/animate.css" />
+<!-- zoom effect -->
+<link rel='stylesheet' href='css/hizoom.css'>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
+  <link href="css/font-awesome.min1.css" rel="stylesheet">
+  <link href="css/bootstrap-datetimepicker.min1.css" rel="stylesheet">  
+  <link href="css/flexslider1.css" rel="stylesheet">
+  <link href="css/templatemo-style1.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .row > .column {
+      padding: 0 8px;
+    }
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    .column {
+      float: left;
+      width: 25%;
+    }
+    
+    /* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 1200px;
+    }
+    
+    /* The Close Button */
+    .close {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .mySlides {
+      display: none;
+    }
+    
+    .cursor {
+      cursor: pointer;
+    }
+    
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    img {
+      margin-bottom: 4px;
+    }
+    
+    .caption-container {
+      text-align: center;
+      background-color: black;
+      padding: 2px 16px;
+      color: white;
+    }
+    
+    .demo {
+      opacity: 0.6;
+    }
+    
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+    
+    img.hover-shadow {
+      transition: 0.3s;
+    }
+    
+    .hover-shadow:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+
+    </style>
+<!-- end zoom effect -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+</head>
+<body id="default_theme" class="it_shop_detail">
+<!-- loader -->
+<div class="bg_load"> <img class="loader_animation" src="images/loaders/srt.png" alt="#" width="280" height="170"/> </div>
+<!-- end loader -->
+<!-- header -->
+<header id="default_header" class="header_style_1">
+    <!-- header top -->
+    <div class="header_top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="full">
+                <div class="topbar-left">
+                  <ul class="list-inline">
+                    <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight">Sumitomo Rubber Thailand</span> </li>
+               
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 right_section_header_top">
+              <div class="float-right">
+                <div class="make_appo"> <a class="btn white_btn" href="it_home_dark.html">Welcome To SRT</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end header top -->
+    <!-- header bottom -->
+    <div class="header_bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+              <!-- logo start -->
+              <div class="logo"> <a href="index.html"><img src="images/logos/srt_logo.png" alt="logo" /></a> </div>
+              <!-- logo end -->
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+              <!-- menu start -->
+          <div class="menu_side">
+              <div id="navbar_menu">
+                <ul class="first-ul">
+                    <li> <a class="active" href="index.html">Home</a>
+                      <ul>
+                        <li><a href="it_home_dark.html">It Dark Home Page</a></li>               
+                      </ul>
+                    </li>
+                    <li> <a>About Us</a>
+                      <ul>
+                          <li><a href="it_about.html">Company Profile</a></li> 
+                          <li><a href="it_conduct.html">SRT Code of Conduct</a></li>
+                          <li><a>Company Policy</a>
+                            <ul>
+                              <li><a>Personal Data Protection Policy</a></li>							  				  
+                            </ul>
+                          </li>					  
+                      </ul>
+                    </li>             
+                  <li> <a href="it_blog_grid.html">Activity</a>
+                    <ul>
+                      <li><a href="it_blog_grid.html">CSR Activity</a></li>
+                      <li><a href="it_new_list.html">News</a></li>
+                    </ul>
+                  </li>
+                  <li> <a href="#">Opportunity</a>
+                    <ul>
+                      <li><a href="it_procurement.html">Procurement</a></li>
+                      <li><a href="#">Recruitment</a></li>
+                    </ul>
+                  </li>
+                  <li> <a href="it_contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="search_icon">
+                <ul>
+                  <li><a href="#" data-toggle="modal" data-target="#search_bar"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- menu end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- header bottom end -->
+  </header>
+  <!-- end header -->
+<!-- inner page banner -->
+<div id="inner_banner" class="section inner_banner_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="full">
+            <div class="title-holder">
+              <div class="title-holder-cell text-left">
+                <h1 class="page-title">Contact us</h1>
+                <ol class="breadcrumb">
+                  <li><a href="index.html">Home</a></li>
+                  <li class="active">Contact us</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end inner page banner -->
+<!-- white bg -->
+<section class="tm-white-bg section-padding-bottom">
+		<div class="container">
+		    <!--หัวเรื่อง-->
+				<div class="tm-section-header section-margin-top">
+					<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>
+					<div class="col-lg-4 col-md-6 col-sm-6"><h2 class="tm-section-title">Office Address</h2></div>
+					<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>	
+        </div>
+        <div class="row">
+			     <!--Fac1-->
+           <div class="col-lg-6">
+              <div class="tm-home-box-3">
+                <div class="tm-home-box-3-img-container">
+                  <img src="images\it_service\contact\01.jpg" alt="image" class="img-responsive" width="250" height="225">	
+                </div>						
+                <div class="tm-home-box-3-info">
+                  <p class="tm-home-box-3-description">7/232 Moo. 6 Soi Pornprapa (Amata City Rayong Industrial Estate) Tambol Mabyangporn, Amphur Pluakdaeng, Rayong 21140<br><br>
+                    Tel : 038-953-000 , 033-060-160<br>
+                    Fax : 038-953-021 , 038-953-028
+                  </p>
+                      <div class="tm-home-box-2-container">
+                  <a href="#" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"><i class="fa fa fa-edit fa-5x tm-home-box-2-icon border-right"></i></a>
+                  <a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3"><font color="#00BFFF">Head Office</font> </span></a>
+                  <a href="https://goo.gl/maps/ion62soZ5jJ2" class="tm-home-box-2-link"><i class="fa fa-map-marker fa-5x tm-home-box-2-icon border-left"></i></a>
+                </div>
+                </div>						
+              </div>					
+               </div>
+           <!--Mold-->
+			     <div class="col-lg-6">
+			        <div class="tm-home-box-3">
+						<div class="tm-home-box-3-img-container">
+                <img src="images\it_service\contact\m.jpg" alt="image" class="img-responsive" width="250" height="225">	
+            </div>						
+						<div class="tm-home-box-3-info">
+							<p class="tm-home-box-3-description">7/323 Moo 6, Soi Pornprapa (Amata City Rayong Industrial Estate) Tambol Mabyangporn, Amphur Pluakdaeng, Rayong 21140<br><br>
+                  Tel : 038-953-000 , 033-060-160<br>
+                  Fax : 038-953-021
+                </p>
+					        <div class="tm-home-box-2-container">
+              <a href="#" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"><i class="fa fa fa-edit fa-5x tm-home-box-2-icon border-right"></i></a>
+							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3"><font color="#00BFFF">Mold Factory</font> </span></a>
+							<a href="https://goo.gl/maps/fGw1HgpGWbv" class="tm-home-box-2-link"><i class="fa fa-map-marker fa-5x tm-home-box-2-icon border-left"></i></a>
+						</div>
+						</div>						
+					</div>
+           </div>
+           <!--End Mold-->
+          <!--Fac3-->
+				   <div class="col-lg-6">
+				    <div class="tm-home-box-3">
+						<div class="tm-home-box-3-img-container">
+							<img src="images\it_service\contact\fac3.jpg" alt="image" class="img-responsive" width="250" height="225">	
+						</div>						
+						<div class="tm-home-box-3-info">
+							<p class="tm-home-box-3-description">7/373 Moo 6, Soi Pornprapa (Amata City Rayong Industrial Estate) Tambol Mabyangporn, Amphur Pluakdaeng, Rayong 21140<br><br>
+                  Tel : 038-953-000 , 033-060-160<br>
+                  Fax : 038-953-021
+                </p>
+					        <div class="tm-home-box-2-container">
+              <a href="#" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"><i class="fa fa fa-edit fa-5x tm-home-box-2-icon border-right"></i></a>
+              <a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3"><font color="#00BFFF">Industrial Tire Factory</font> </span></a>
+							<a href="https://goo.gl/maps/SEnXFutwDAv" class="tm-home-box-2-link"><i class="fa fa-map-marker fa-5x tm-home-box-2-icon border-left"></i></a>
+						</div>
+						</div>						
+					</div>
+           </div>
+           <!--End Fac3-->
+           <!--Sales Office-->
+			     <div class="col-lg-6">
+			        <div class="tm-home-box-3">
+						<div class="tm-home-box-3-img-container">
+							<img src="images\it_service\contact\bkk1.jpg" alt="image" class="img-responsive" width="250" height="225">	
+						</div>						
+						<div class="tm-home-box-3-info">
+							<p class="tm-home-box-3-description">909 Ample Tower 4th fl. (4/4) Debaratna Rd.,
+                Kwang Bangna-Nua, Khet Bangna, Bangkok, 10260<br><br>
+                Tel : 02-348-3850-7<br>
+                Fax : 02-348-3859
+              </p>
+              <br>
+					        <div class="tm-home-box-2-container">
+              <a href="#" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"><i class="fa fa fa-edit fa-5x tm-home-box-2-icon border-right"></i></a>
+              <a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3"><font color="#00BFFF">Sales Office</font> </span></a>
+							<a href="https://www.google.co.th/maps/place/Adecco+Bangna+Limited/@13.6667006,100.6400309,17z/data=!3m1!4b1!4m5!3m4!1s0x311d5fc907095985:0x35d6c6e2cb70b494!8m2!3d13.6666954!4d100.6422249" class="tm-home-box-2-link"><i class="fa fa-map-marker fa-5x tm-home-box-2-icon border-left"></i></a>
+						</div>
+						</div>						
+					</div>
+           </div>
+           <!--End sales Office-->
+           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="main_heading text_align_center">
+                  <p class="home-description"><font color="#0000FF">Whistleblowing Policy  :  </font>To reporting of suspected misconduct, illegal acts. 
+                    Feel free to make a call. All information shall be kept with top secret priority...<br>
+                    Tel. 038-953-000 , 033-060-160 Ext.1004		</p>	
+              </div>
+            </div>
+          
+      </div>	
+      <!--modal-->
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+      
+          <div class="mySlides">
+              <center><img src="images\it_service\contact\srt.jpg" style="width:75%"></center>
+          </div>
+          <div class="mySlides">
+              <center><img src="images\it_service\contact\mold.jpg" style="width:75%"></center>
+            </div>
+        
+            <div class="mySlides">
+                <center><img src="images\it_service\contact\fac3-1.jpg" style="width:75%"></center>
+            </div>
+            
+            <div class="mySlides">
+              <center><img src="images\it_service\contact\bkk.jpg" style="width:75%"></center>
+            </div>
+      
+            </div>
+      </div>	
+		</div>
+	</section>
+
+<!-- footer -->
+<footer class="footer_style_2">
+  <div class="container-fuild">
+    <div class="row"  >
+      <div class="map_section">
+          <div id="map">
+              <div class="">
+                  <div class="gmap_canvas">
+                    <iframe width="50%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=sumitomo%20rubber%20thailand&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://www.whatismyip-address.com/nordvpn-coupon/"></a>
+                  </div>
+                  <style>.mapouter{position:relative;text-align:right;height:500px;width:700px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:200%;}</style>
+                </div>
+          </div>
+      </div>
+      <div class="footer_blog" style="border-width:1px 10px">
+        <div class="row" >
+          
+          <div class="col-md-6">
+            <div class="main-heading left_text">
+              <h2>Services</h2>
+            </div>
+            <ul class="footer-menu">
+              <li><a href="https://www.dunloptire.co.th/" target="new"><i class="fa fa-angle-right"></i> Dunlop Tire</a></li>
+              <a href="http://www.dunloptire.co.th" target="new"><img src="images/footer/dunlop.webp" alt="Dunlop" height="60"></a>
+              <li><a href="https://www.srigroup.co.jp/english/" target="new"><i class="fa fa-angle-right"></i> SRI Group</a></li>
+              <a href="http://www.srigroup.co.jp/english/" target="new"><img src="images/footer/sumitomogroup.webp" alt="Sumitomo Rubber Industries Group - Japan" height="60"></a>
+              <li><a href="http://www.stamfordtyresthailand.com/products/falken/" target="new"><i class="fa fa-angle-right"></i> Falken thailand</a></li>
+              <a href="http://www.stamfordtyresthailand.com/products/falken/" target="new"><img src="images/footer/falken.webp" alt="Falken" height="60"></a>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="main-heading left_text">
+              <h2>Contact us</h2>
+            </div>
+            <p>Factory 1 & 2 (H/Q) : Rayong,<br>
+              Factory 3 : Rayong<br>
+              Mold Factory: Rayong<br>
+              Sales Office: Bangkok<br><br>
+             <font color="LightSkyBlue">To reporting of suspected misconduct, illegal acts. <br>
+              Feel free to make a call. All information shall be kept with top secret priority.<br>
+            
+              Tel. 038-953-000 , 033-060-160 Ext.1004 <br>
+              Emergency call : 08-1940-2084
+            </font>
+           
+          </div>
+        </div>
+      </div>
+      <div class="cprt">
+        <p>©2020 Sumitomo Rubber Industries, Ltd. , All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
+<!-- js section -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- menu js -->
+<script src="js/menumaker.js"></script>
+<!-- wow animation -->
+<script src="js/wow.js"></script>
+<!-- custom js -->
+<script src="js/custom.js"></script>
+
+
+<!-- end google map js -->
+<!-- zoom effect -->
+<script src='js/hizoom.js'></script>
+<script>
+        $('.hi1').hiZoom({
+            width: 300,
+            position: 'right'
+        });
+        $('.hi2').hiZoom({
+            width: 400,
+            position: 'right'
+        });
+    </script>
+
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      		<!-- jQuery -->
+<script type="text/javascript" src="js/moment.js"></script>							<!-- moment.js -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>					<!-- bootstrap js -->
+<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>	<!-- bootstrap date time picker js, http://eonasdan.github.io/bootstrap-datetimepicker/ -->
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<!--
+<script src="js/froogaloop.js"></script>
+<script src="js/jquery.fitvid.js"></script>
+-->
+ <script type="text/javascript" src="js/templatemo-script.js"></script>      		<!-- Templatemo Script -->
+<script>
+// HTML document is loaded. DOM is ready.
+$(function() {
+
+  $('#hotelCarTabs a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+
+      $('.date').datetimepicker({
+          format: 'MM/DD/YYYY'
+        });
+        $('.date-time').datetimepicker();
+
+  // https://css-tricks.com/snippets/jquery/smooth-scrolling/
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+});
+
+// Load Flexslider when everything is loaded.
+$(window).load(function() {	  		
+  // Vimeo API nonsense
+
+/*
+    var player = document.getElementById('player_1');
+    $f(player).addEvent('ready', ready);
+   
+    function addEvent(element, eventName, callback) {
+      if (element.addEventListener) {
+        element.addEventListener(eventName, callback, false)
+      } else {
+        element.attachEvent(eventName, callback, false);
+      }
+    }
+   
+    function ready(player_id) {
+      var froogaloop = $f(player_id);
+      froogaloop.addEvent('play', function(data) {
+        $('.flexslider').flexslider("pause");
+      });
+      froogaloop.addEvent('pause', function(data) {
+        $('.flexslider').flexslider("play");
+      });
+    }
+*/
+
+   
+   
+    // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
+/*
+
+    $(".flexslider")
+      .fitVids()
+      .flexslider({
+        animation: "slide",
+        useCSS: false,
+        animationLoop: false,
+        smoothHeight: true,
+        controlNav: false,
+        before: function(slider){
+          $f(player).api('pause');
+        }
+    });
+*/
+
+
+    
+
+//	For images only
+    $('.flexslider').flexslider({
+      controlNav: false
+    });
+
+
+  });
+</script>
+
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot1");
+if (n > slides.length) {slideIndex = 1}    
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";  
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";  
+dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
